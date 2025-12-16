@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# npm/yarn lockfiles (we use pnpm)
+package-lock.json
+yarn.lock
+
+# Results and logs
+results/
+*.jsonl
+
+# User settings (contains path to external config)
+settings.json
+.webperf-settings.json
+
+# Environment files
+.env
+.env.local
+
+# Local config is NOT allowed - use external config only
+# This prevents accidentally committing sensitive data
+config.ts
+
+# Runtime files
+.running-pids.json
+
+# Test coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+

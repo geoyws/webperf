@@ -1,0 +1,36 @@
+{
+  "name": "webperf",
+  "version": "1.0.0",
+  "description": "Cross-platform web performance measurement tool using Lighthouse and Puppeteer",
+  "type": "module",
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "perf": "tsx perf.ts",
+    "measure": "tsx perf.ts measure",
+    "hub": "tsx perf.ts hub",
+    "hub-mf": "tsx perf.ts hub-mf",
+    "stop": "tsx perf.ts stop",
+    "status": "tsx perf.ts status",
+    "settings": "tsx perf.ts settings",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "find-process": "^1.4.7",
+    "lighthouse": "^12.2.1",
+    "puppeteer": "^23.7.1",
+    "tree-kill": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-v8": "^2.1.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

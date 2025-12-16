@@ -1,0 +1,40 @@
+{
+  "_README": "Copy this to settings.json - it is gitignored and won't be committed",
+  "_IMPORTANT": "configPath MUST point to a file OUTSIDE this repo",
+
+  "configPath": "/absolute/path/to/your/project/webperf.config.ts",
+
+  "defaultRuns": 5,
+  "defaultUrl": "https://example.com",
+  "resultsPath": "./results",
+  "jsonlLogPath": "./results/measurements.jsonl",
+  "autoOpenResults": false,
+  "notePrefix": "",
+
+  "maxConcurrency": 3,
+  "scenarios": [
+    {
+      "id": "homepage",
+      "note": "Homepage baseline",
+      "url": "https://example.com",
+      "runs": 5,
+      "tags": ["production", "critical", "public"],
+      "enabled": true
+    },
+    {
+      "id": "dashboard",
+      "note": "Dashboard with auth",
+      "url": "https://example.com/dashboard",
+      "runs": 3,
+      "tags": ["production", "authenticated"]
+    },
+    {
+      "id": "local-dev",
+      "note": "Local development server",
+      "url": "http://localhost:3000",
+      "runs": 5,
+      "tags": ["development", "local"],
+      "applyOverrides": true
+    }
+  ]
+}
